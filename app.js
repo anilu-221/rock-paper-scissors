@@ -9,21 +9,21 @@ function getComputerChoice() {
     }
 }
 
-function playOneRound(userChoice, computerChoice) {
+function playRound(userChoice, computerChoice) {
     userChoice = userChoice.toUpperCase();
     computerChoice = computerChoice .toUpperCase();
 
     if(userChoice === computerChoice){ //Tie
         return 'Tie';
-    } else if(userChoice === 'ROCK' && computerChoice === 'PAPER'){ //User chooses ROCK
+    } else if(userChoice === 'ROCK' && computerChoice === 'PAPER'){ 
         return 'Computer';
     } else if(userChoice === 'ROCK' && computerChoice === 'SCISSORS'){
         return 'User';
-    } else if(userChoice === 'PAPER' && computerChoice === 'SCISSORS'){ //User chooses Paper
+    } else if(userChoice === 'PAPER' && computerChoice === 'SCISSORS'){ 
         return 'Computer';
     } else if(userChoice === 'PAPER' && computerChoice === 'ROCK'){
         return 'User';
-    } else if(userChoice === 'SCISSORS' && computerChoice === 'ROCK'){ //User chooses Scissors
+    } else if(userChoice === 'SCISSORS' && computerChoice === 'ROCK'){ 
         return 'Computer';
     } else if(userChoice === 'SCISSORS' && computerChoice === 'PAPER'){
         return 'User';
@@ -38,7 +38,7 @@ function playRockPaperScissors(numberOfGames) {
 
     while (userScore != numberOfGames && computerScore != numberOfGames){
         let userChoice = prompt("Choose your weapon:");
-        let winner = playOneRound(userChoice, getComputerChoice());
+        let winner = playRound(userChoice, getComputerChoice());
         if(winner === 'User'){
             userScore++;
         } else if(winner === 'Computer'){
@@ -57,5 +57,3 @@ function playRockPaperScissors(numberOfGames) {
         console.log('Computer WINS everything');
     } 
 }
-
-playRockPaperScissors(1);
