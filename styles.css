@@ -1,5 +1,24 @@
 .weapon-img{
     width: 100%;
     height: auto;
-    min-width: 100px;
+}
+
+.weapon-card{
+    transition: 200ms;
+}
+
+.weapon-card:hover{
+    background-color: rgb(226, 163, 46);
+}
+
+.text-winner{
+    position: relative;
+    transform: translate(1rem);
+}
+
+.text-winner:before{
+    position: absolute;
+    content: '✓';
+    left: -1rem;
+    color: rgb(226, 163, 46);
 }

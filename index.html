@@ -11,30 +11,43 @@
     <title>Rock Paper Scissors</title>
 </head>
 <body class="bg-dark">
-
+    <div class="d-flex min-vh-100 align-items-center">
         <div class="container">
             <div class="row p-5">
                 <h1 class="text-white mb-5 text-center display-1">Rock Paper Scissors</h1>
                 <!--Left-->
                 <div class="col-md-8">
                     <!--Scores-->
-                    <div class="bg-light rounded shadow p-5">
-                        Scores go here
+                    <div class="border rounded shadow p-5 text-white">
+                        <div class="row text-center">
+                            <div class="col-md-6">
+                                <p class="display-6">
+                                    User
+                                </p>
+                                <p class="fw-bold display-2">1</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="display-6 text-center">
+                                    Machine
+                                </p>
+                                <p class="fw-bold display-2">2</p>
+                            </div>
+                        </div>
                     </div>
                     <!--Select your weapon-->
                     <div class="row mt-4">
                         <div class="col-4">
-                            <div class="bg-light rounded shadow p-5">
+                            <div class="weapon-card border rounded shadow p-3 p-lg-5">
                                 <img class="weapon-img" src="img/rock.png" alt="Rock">
                             </div>
                         </div>
                         <div class="col-4">
-                            <div class="bg-light rounded shadow p-5">
+                            <div class="weapon-card border rounded shadow p-3 p-lg-5">
                                 <img class="weapon-img" src="img/paper.png" alt="Paper">
                             </div>
                         </div>
                         <div class="col-4">
-                            <div class="bg-light rounded shadow p-5">
+                            <div class="weapon-card border rounded shadow p-3 p-lg-5">
                                 <img class="weapon-img" src="img/scissors.png" alt="Scissors">
                             </div>
                         </div>
@@ -42,15 +55,29 @@
                 </div>
 
                 <!--Right-->
-                <div class="col-md-4">
+                <div class="col-md-4 mt-3 mt-md-0">
                     <!--History-->
-                    <div class="bg-light rounded shadow p-5 h-100">
-                        History goes here
+                    <div class="border rounded shadow p-5 h-100 text-white">
+                        <p class="text-white display-6 ">History</p>
+                        <table class="table text-light ">
+                            <tr>
+                              <th>Human</th>
+                              <th>Machines</th>
+                            </tr>
+                            <tr>
+                              <td class="fw-bold text-winner">Rock</td>
+                              <td>Paper</td>
+                            </tr>
+                            <tr>
+                              <td>Paper</td>
+                              <td class="fw-bold text-winner">Scissors</td>
+                            </tr>
+                          </table>
                     </div>
                 </div>
             </div>
         </div>
-
+    </div>
     </body>
 </body> 
 </html>
