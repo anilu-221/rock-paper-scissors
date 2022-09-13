@@ -11,6 +11,16 @@
     background-color: rgb(226, 163, 46);
 }
 
+.weapon-img-sm{
+    width: 100px;
+    height: auto;
+}
+
+.weapon-card-sm{
+    transition: 200ms;
+}
+
+
 .text-winner{
     position: relative;
     transform: translate(1rem);
@@ -20,5 +30,14 @@
     position: absolute;
     content: '✓';
     left: -1rem;
+    color: rgb(226, 163, 46);
+}
+
+button{
+    background-color: transparent;
+    border: 0;
+}
+
+.text-yellow{
     color: rgb(226, 163, 46);
 }

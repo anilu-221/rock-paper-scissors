@@ -13,8 +13,9 @@
 <body class="bg-dark">
     <div class="d-flex min-vh-100 align-items-center">
         <div class="container">
-            <div class="row p-5">
-                <h1 class="text-white mb-5 text-center display-1">Rock Paper Scissors</h1>
+            <div class="row p-5 text-center">
+                <h1 class="text-white  text-center display-1">Rock Paper Scissors</h1>
+                <p class="text-yellow h2 mb-4">Best out of <span class="text-yellow fw-bold">5</span></p>
                 <!--Left-->
                 <div class="col-md-8">
                     <!--Scores-->
@@ -22,34 +23,48 @@
                         <div class="row text-center">
                             <div class="col-md-6">
                                 <p class="display-6">
-                                    User
+                                    User: 
+                                    <span class="fw-bold">1</span>
                                 </p>
-                                <p class="fw-bold display-2">1</p>
+
+                                <div class="weapon-card-sm p-1">
+                                    <img class="weapon-img-sm" src="img/rock.png" alt="Rock">
+                                </div>
                             </div>
                             <div class="col-md-6">
-                                <p class="display-6 text-center">
-                                    Machine
+                                <p class="display-6">
+                                    Machine: 
+                                    <span class="fw-bold">1</span>
                                 </p>
-                                <p class="fw-bold display-2">2</p>
+
+                                <div class="weapon-card-sm p-1">
+                                    <img class="weapon-img-sm" src="img/rock.png" alt="Rock">
+                                </div>
                             </div>
                         </div>
                     </div>
                     <!--Select your weapon-->
                     <div class="row mt-4">
                         <div class="col-4">
-                            <div class="weapon-card border rounded shadow p-3 p-lg-5">
-                                <img class="weapon-img" src="img/rock.png" alt="Rock">
-                            </div>
+                            <button>
+                                <div class="weapon-card border rounded shadow p-3 p-lg-5">
+                                    <img class="weapon-img" src="img/rock.png" alt="Rock">
+                                </div>
+                            </button>
                         </div>
                         <div class="col-4">
-                            <div class="weapon-card border rounded shadow p-3 p-lg-5">
-                                <img class="weapon-img" src="img/paper.png" alt="Paper">
-                            </div>
+                            <button>
+                                <div class="weapon-card border rounded shadow p-3 p-lg-5">
+                                    <img class="weapon-img" src="img/paper.png" alt="Paper">
+                                </div>
+                            </button>
                         </div>
                         <div class="col-4">
-                            <div class="weapon-card border rounded shadow p-3 p-lg-5">
-                                <img class="weapon-img" src="img/scissors.png" alt="Scissors">
-                            </div>
+                            <button>
+                                <div class="weapon-card border rounded shadow p-3 p-lg-5">
+                                    <img class="weapon-img" src="img/scissors.png" alt="Scissors">
+                                </div>
+                            </button>
                         </div>
                     </div>
                 </div>
