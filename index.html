@@ -10,27 +10,34 @@
     <script src="app.js" defer></script>
     <title>Rock Paper Scissors</title>
 </head>
-<body class="bg-dark">
+<body class="bg-dark position-relative">
     <div class="d-flex min-vh-100 align-items-center">
         <div class="container">
             <div class="row p-5">
-                <h1 class="text-white mb-5 text-center display-1">Rock Paper Scissors</h1>
+                <h1 class="text-white text-center display-1">Rock Paper Scissors</h1>
+                <h2 class="text-yellow text-center  mb-4">Best out of 3</h2>
                 <!--Left-->
                 <div class="col-md-8">
                     <!--Scores-->
                     <div class="border rounded shadow p-5 text-white">
                         <div class="row text-center">
                             <div class="col-md-6">
-                                <p class="display-6">
-                                    User
+                                <p class="display-4">
+                                    User: 
+                                    <span class="fw-bold" id="user-score">0</span>
                                 </p>
-                                <p class="fw-bold display-2" id="user-score">0</p>
+                                <div id="user-img-weapon">
+                                    
+                                </div>
                             </div>
                             <div class="col-md-6">
-                                <p class="display-6 text-center">
-                                    Machine
+                                <p class="display-4 text-center">
+                                    Machine: 
+                                    <span class="fw-bold" id="computer-score">0</span>
                                 </p>
-                                <p class="fw-bold display-2" id="computer-score">0</p>
+                                <div id="machine-img-weapon">
+                                    
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -63,31 +70,43 @@
                 <!--Right-->
                 <div class="col-md-4 mt-3 mt-md-0">
                     <!--History-->
-                    <div class="border rounded shadow p-5 h-100 text-white">
+                    <div class="border rounded shadow p-5 h-100 text-white text-center">
                         <p class="text-white display-6 ">History</p>
-                        <table class="table text-light ">
-                            <tr>
-                              <th>Human</th>
-                              <th>Machines</th>
-                            </tr>
-                            <tr>
-                              <td class="fw-bold text-winner">Rock</td>
-                              <td>Paper</td>
-                            </tr>
-                            <tr>
-                              <td>Paper</td>
-                              <td class="fw-bold text-winner">Scissors</td>
-                            </tr>
+                        <table class="table text-light">
+                            <tbody id="history-table">
+                                <tr>
+                                    <th>Human</th>
+                                    <th>Machines</th>
+                                </tr>
+                            </tbody>
                           </table>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <!--Win Message-->
+    <div class="bg-dark d-none text-white" id="win-container">
+        <div class="text-center">
+            <h1 class="display-1">YOU WIN</h1>
+            <a href="#" class="btn btn-primary play-again">Play Again</a>
+        </div>
+    </div>  
+
+    <!--Lose Message-->
+    <div class="bg-dark d-none text-white" id="lose-container">
+        <div class="text-center">
+            <h1 class="display-1">YOU LOSE</h1>
+            <a href="#" class="btn btn-primary play-again">Play Again</a>
+        </div>
+    </div>  
+
     <audio data-sound="win" src="sounds/win.wav"></audio>
     <audio data-sound="lose" src="sounds/lose.wav"></audio>
+    <audio data-sound="tie" src="sounds/tie.wav"></audio>
     <audio data-sound="win-battle" src="sounds/win-battle.wav"></audio>
-    <audio data-sound="lose-battle" src="sounds/lose-battle.wav"></audio>
+    <audio data-sound="lose-battle" src="sounds/loose-battle.wav"></audio>
 </body>
 </body> 
 </html>
