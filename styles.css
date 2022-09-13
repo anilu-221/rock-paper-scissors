@@ -22,3 +22,11 @@
     left: -1rem;
     color: rgb(226, 163, 46);
 }
+
+button{
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+}

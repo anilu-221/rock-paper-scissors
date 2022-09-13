@@ -1,59 +1,51 @@
-function getComputerChoice() {
-    let randomNumber = Math.floor(Math.random() *  3);
-    if(randomNumber == 0) {
-        return 'Rock';
-    } else if(randomNumber == 1) {
-        return 'Paper';
-    } else{
-        return 'Scissors';
-    }
-}
+//Variables
+const weapons = document.querySelectorAll('button');
+let userScore = 0;
+let computerScore = 0;
 
-function playRound(userChoice, computerChoice) {
-    userChoice = userChoice.toUpperCase();
-    computerChoice = computerChoice .toUpperCase();
 
-    if(userChoice === computerChoice){ //Tie
+//Event Listeners
+weapons.forEach(weapon => weapon.addEventListener('click', playRound));
+
+//Functions
+function playRound(){
+    let userChoice = (this.getAttribute('data-weapon')).toUpperCase();
+    let machineChoice = 'ROCK';
+    let userScoreHTML = document.querySelector('#user-score');
+    let computerScoreHTML = document.querySelector('#computer-score');
+
+    if(userChoice === machineChoice){ 
         return 'Tie';
-    } else if(userChoice === 'ROCK' && computerChoice === 'PAPER'){ 
-        return 'Computer';
-    } else if(userChoice === 'ROCK' && computerChoice === 'SCISSORS'){
-        return 'User';
-    } else if(userChoice === 'PAPER' && computerChoice === 'SCISSORS'){ 
-        return 'Computer';
-    } else if(userChoice === 'PAPER' && computerChoice === 'ROCK'){
-        return 'User';
-    } else if(userChoice === 'SCISSORS' && computerChoice === 'ROCK'){ 
-        return 'Computer';
-    } else if(userChoice === 'SCISSORS' && computerChoice === 'PAPER'){
-        return 'User';
+    } else if(userChoice === 'ROCK' && machineChoice === 'PAPER'){ 
+        computerScore += 1;
+        playLoseSound();
+    } else if(userChoice === 'ROCK' && machineChoice === 'SCISSORS'){
+        userScore += 1;
+        playWinSound();
+    } else if(userChoice === 'PAPER' && machineChoice === 'SCISSORS'){ 
+        computerScore += 1;
+        playLoseSound();
+    } else if(userChoice === 'PAPER' && machineChoice === 'ROCK'){
+        userScore += 1;
+        playWinSound();
+    } else if(userChoice === 'SCISSORS' && machineChoice === 'ROCK'){ 
+        computerScore += 1;
+        playLoseSound();
+    } else if(userChoice === 'SCISSORS' && machineChoice === 'PAPER'){
+        userScore += 1;
+        playWinSound();
     }
+
+    userScoreHTML.textContent = userScore;
+    computerScoreHTML.textContent = computerScore;
 }
 
+function playWinSound(){
+    document.querySelector('audio[data-sound="win"]').currentTime = 0;
+    document.querySelector('audio[data-sound="win"]').play();
+}
 
-
-function playRockPaperScissors(numberOfGames) {
-    let userScore = 0;
-    let computerScore = 0;
-
-    while (userScore != numberOfGames && computerScore != numberOfGames){
-        let userChoice = prompt("Choose your weapon:");
-        let winner = playRound(userChoice, getComputerChoice());
-        if(winner === 'User'){
-            userScore++;
-        } else if(winner === 'Computer'){
-            computerScore++;
-        }
-        console.log(winner);
-        console.log('User: ' + userScore);
-        console.log('computer: ' + computerScore);
-    }
-
-    if(userScore === numberOfGames){
-        console.log('User WINS everything');
-    } 
-
-    if(computerScore === numberOfGames){
-        console.log('Computer WINS everything');
-    } 
+function playLoseSound(){
+    document.querySelector('audio[data-sound="lose"]').currentTime = 0;
+    document.querySelector('audio[data-sound="lose"]').play(); 
 }

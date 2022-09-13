@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
-    <script src="app.js"></script>
+    <script src="app.js" defer></script>
     <title>Rock Paper Scissors</title>
 </head>
 <body class="bg-dark">
@@ -24,32 +24,38 @@
                                 <p class="display-6">
                                     User
                                 </p>
-                                <p class="fw-bold display-2">1</p>
+                                <p class="fw-bold display-2" id="user-score">0</p>
                             </div>
                             <div class="col-md-6">
                                 <p class="display-6 text-center">
                                     Machine
                                 </p>
-                                <p class="fw-bold display-2">2</p>
+                                <p class="fw-bold display-2" id="computer-score">0</p>
                             </div>
                         </div>
                     </div>
                     <!--Select your weapon-->
                     <div class="row mt-4">
                         <div class="col-4">
-                            <div class="weapon-card border rounded shadow p-3 p-lg-5">
-                                <img class="weapon-img" src="img/rock.png" alt="Rock">
-                            </div>
+                            <button data-weapon="rock">
+                                <div class="weapon-card border rounded shadow p-3 p-lg-5">
+                                    <img class="weapon-img" src="img/rock.png" alt="Rock">
+                                </div>
+                            </button>
                         </div>
                         <div class="col-4">
-                            <div class="weapon-card border rounded shadow p-3 p-lg-5">
-                                <img class="weapon-img" src="img/paper.png" alt="Paper">
-                            </div>
+                            <button data-weapon="paper">
+                                <div class="weapon-card border rounded shadow p-3 p-lg-5">
+                                    <img class="weapon-img" src="img/paper.png" alt="Paper">
+                                </div>
+                            </button>
                         </div>
                         <div class="col-4">
-                            <div class="weapon-card border rounded shadow p-3 p-lg-5">
-                                <img class="weapon-img" src="img/scissors.png" alt="Scissors">
-                            </div>
+                            <button data-weapon="scissors">
+                                <div class="weapon-card border rounded shadow p-3 p-lg-5">
+                                    <img class="weapon-img" src="img/scissors.png" alt="Scissors">
+                                </div>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -78,6 +84,10 @@
             </div>
         </div>
     </div>
-    </body>
+    <audio data-sound="win" src="sounds/win.wav"></audio>
+    <audio data-sound="lose" src="sounds/lose.wav"></audio>
+    <audio data-sound="win-battle" src="sounds/win-battle.wav"></audio>
+    <audio data-sound="lose-battle" src="sounds/lose-battle.wav"></audio>
+</body>
 </body> 
 </html>
