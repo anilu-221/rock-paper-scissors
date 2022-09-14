@@ -7,21 +7,28 @@
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
-    <script src="app.js"></script>
+    <script src="app.js" defer></script>
     <title>Rock Paper Scissors</title>
 </head>
-<body class="bg-dark">
+<body class="bg-dark position-relative">
     <div class="d-flex min-vh-100 align-items-center">
         <div class="container">
+<<<<<<< HEAD
             <div class="row p-5 text-center">
                 <h1 class="text-white  text-center display-1">Rock Paper Scissors</h1>
                 <p class="text-yellow h2 mb-4">Best out of <span class="text-yellow fw-bold">5</span></p>
+=======
+            <div class="row p-5">
+                <h1 class="text-white text-center display-1">Rock Paper Scissors</h1>
+                <h2 class="text-yellow text-center  mb-4">Best out of 3</h2>
+>>>>>>> rps-ui
                 <!--Left-->
                 <div class="col-md-8">
                     <!--Scores-->
                     <div class="border rounded shadow p-5 text-white">
                         <div class="row text-center">
                             <div class="col-md-6">
+<<<<<<< HEAD
                                 <p class="display-6">
                                     User: 
                                     <span class="fw-bold">1</span>
@@ -39,6 +46,23 @@
 
                                 <div class="weapon-card-sm p-1">
                                     <img class="weapon-img-sm" src="img/rock.png" alt="Rock">
+=======
+                                <p class="display-4">
+                                    User: 
+                                    <span class="fw-bold" id="user-score">0</span>
+                                </p>
+                                <div id="user-img-weapon">
+                                    
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="display-4 text-center">
+                                    Machine: 
+                                    <span class="fw-bold" id="computer-score">0</span>
+                                </p>
+                                <div id="machine-img-weapon">
+                                    
+>>>>>>> rps-ui
                                 </div>
                             </div>
                         </div>
@@ -46,21 +70,33 @@
                     <!--Select your weapon-->
                     <div class="row mt-4">
                         <div class="col-4">
+<<<<<<< HEAD
                             <button>
+=======
+                            <button data-weapon="rock">
+>>>>>>> rps-ui
                                 <div class="weapon-card border rounded shadow p-3 p-lg-5">
                                     <img class="weapon-img" src="img/rock.png" alt="Rock">
                                 </div>
                             </button>
                         </div>
                         <div class="col-4">
+<<<<<<< HEAD
                             <button>
+=======
+                            <button data-weapon="paper">
+>>>>>>> rps-ui
                                 <div class="weapon-card border rounded shadow p-3 p-lg-5">
                                     <img class="weapon-img" src="img/paper.png" alt="Paper">
                                 </div>
                             </button>
                         </div>
                         <div class="col-4">
+<<<<<<< HEAD
                             <button>
+=======
+                            <button data-weapon="scissors">
+>>>>>>> rps-ui
                                 <div class="weapon-card border rounded shadow p-3 p-lg-5">
                                     <img class="weapon-img" src="img/scissors.png" alt="Scissors">
                                 </div>
@@ -72,27 +108,43 @@
                 <!--Right-->
                 <div class="col-md-4 mt-3 mt-md-0">
                     <!--History-->
-                    <div class="border rounded shadow p-5 h-100 text-white">
+                    <div class="border rounded shadow p-5 h-100 text-white text-center">
                         <p class="text-white display-6 ">History</p>
-                        <table class="table text-light ">
-                            <tr>
-                              <th>Human</th>
-                              <th>Machines</th>
-                            </tr>
-                            <tr>
-                              <td class="fw-bold text-winner">Rock</td>
-                              <td>Paper</td>
-                            </tr>
-                            <tr>
-                              <td>Paper</td>
-                              <td class="fw-bold text-winner">Scissors</td>
-                            </tr>
+                        <table class="table text-light">
+                            <tbody id="history-table">
+                                <tr>
+                                    <th>Human</th>
+                                    <th>Machines</th>
+                                </tr>
+                            </tbody>
                           </table>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    </body>
+
+    <!--Win Message-->
+    <div class="bg-dark d-none text-white" id="win-container">
+        <div class="text-center">
+            <h1 class="display-1">YOU WIN</h1>
+            <a href="#" class="btn btn-primary play-again">Play Again</a>
+        </div>
+    </div>  
+
+    <!--Lose Message-->
+    <div class="bg-dark d-none text-white" id="lose-container">
+        <div class="text-center">
+            <h1 class="display-1">YOU LOSE</h1>
+            <a href="#" class="btn btn-primary play-again">Play Again</a>
+        </div>
+    </div>  
+
+    <audio data-sound="win" src="sounds/win.wav"></audio>
+    <audio data-sound="lose" src="sounds/lose.wav"></audio>
+    <audio data-sound="tie" src="sounds/tie.wav"></audio>
+    <audio data-sound="win-battle" src="sounds/win-battle.wav"></audio>
+    <audio data-sound="lose-battle" src="sounds/loose-battle.wav"></audio>
+</body>
 </body> 
 </html>
