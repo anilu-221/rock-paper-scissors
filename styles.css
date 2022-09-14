@@ -37,15 +37,6 @@
     color: rgb(226, 163, 46);
 }
 
-<<<<<<< HEAD
-button{
-    background-color: transparent;
-    border: 0;
-}
-
-.text-yellow{
-    color: rgb(226, 163, 46);
-=======
 .text-yellow{
     color: rgb(226, 163, 46);
 }
@@ -80,5 +71,4 @@ button{
 .btn{
     background-color: rgb(226, 163, 46);
     border: rgb(226, 163, 46);
->>>>>>> rps-ui
 }
